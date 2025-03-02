@@ -1,0 +1,43 @@
+# .NET build output
+**/bin/
+**/obj/
+**/out/
+
+# IDE files
+**/.vs/
+**/.vscode/
+**/.idea/
+
+# Development files
+**/*.user
+**/*.userosscache
+**/*.dbmdl
+**/*.jfm
+
+# Git files
+**/.git/
+**/.gitignore
+**/.gitattributes
+
+# CI/CD
+**/.github/
+
+# Local development
+**/Properties/launchSettings.json
+**/appsettings.Development.json
+
+# Docker files (to avoid recursive copying)
+**/Dockerfile*
+**/.dockerignore
+**/docker-compose*
+
+# Test files
+**/TestResults/
+**/*.Tests/
+**/*.Test/
+**/tests/
+
+# Misc
+**/.DS_Store
+**/*.md
+**/LICENSE

@@ -1,0 +1,39 @@
+{
+  "name": "TaskManager",
+  "targetFramework": "net9.0",
+  "projects": [
+    { "name": "Domain", "template": "classlib", "baseDir": "src", "projectReferences": [] },
+    {
+      "name": "Application",
+      "template": "classlib",
+      "baseDir": "src",
+      "projectReferences": ["Domain"]
+    },
+    {
+      "name": "Infrastructure",
+      "template": "classlib",
+      "baseDir": "src",
+      "projectReferences": ["Domain", "Application"]
+    },
+    {
+      "name": "Api",
+      "template": "webapi",
+      "baseDir": "src",
+      "projectReferences": ["Domain", "Application", "Infrastructure"]
+    },
+    {
+      "name": "Tests",
+      "template": "xunit",
+      "baseDir": "tests",
+      "projectReferences": ["Domain", "Application", "Infrastructure", "Api"]
+    }
+  ],
+  "staticFiles": [
+    { "name": ".gitignore", "destination": "." },
+    { "name": ".dockerignore", "destination": "." }
+  ],
+  "docker": {
+    "runtimeImage": "mcr.microsoft.com/dotnet/aspnet:9.0",
+    "sdkImage": "mcr.microsoft.com/dotnet/sdk:9.0"
+  }
+}

@@ -1,0 +1,4 @@
+{
+  "solutionOutputDir": "/Users/opolancoh/dev/dotnet",
+  "dotnetTestProjectTemplates": ["xunit", "nunit", "mstest"]
+}
