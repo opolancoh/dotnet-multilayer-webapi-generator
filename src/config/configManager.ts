@@ -1,7 +1,7 @@
 import path from 'path';
 import { AppConfig, SolutionConfig } from '../types/configTypes.js';
-import appConfigData from './app.config.json' assert { type: 'json' };
-import solutionConfigData from './solution.config.json' assert { type: 'json' };
+import appConfigData from './app.config.json' with { type: 'json' };
+import solutionConfigData from './solution.config.json' with { type: 'json' };
 
 // Helper function to recursively freeze an object
 function deepFreeze<T>(obj: T): T {
